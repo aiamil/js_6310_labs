@@ -11,7 +11,7 @@ class Vehicle {
         if (typeof make !== "string" || make === ""){
             throw new Error("неизвестная марка")
         } else {
-            this.make = make;
+            this.make = make;   
         };
         //////////////
         if (typeof model  !== "string" || model === ""){
