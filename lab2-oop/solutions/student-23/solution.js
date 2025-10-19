@@ -44,11 +44,18 @@ class Vehicle {
     /////// Добавьте сеттер для года выпуска с проверкой: год не может быть больше текущего.
     set year(newYear) {
     const currentYear = new Date().getFullYear();
+    if (typeof newYear !== "number" || !Number.isInteger(newYear)) {
+        throw new Error("Год должен быть целым числом");
+    }
+    if (newYear < 1886) {
+        throw new Error("год выпуска не может быть меньше 1886");
+    }
     if (newYear > currentYear) {
         throw new Error("год выпуска не может быть больше текущего");
     }
     this._year = newYear;
 }
+
 
     get year() {
         return this._year;
@@ -197,10 +204,10 @@ function runTests() {
     // Тест для минимально допустимого года (1886) + 1 МАШИНА
         try {
             const vehicle_3 = new Vehicle('Toyota', 'Camry', 1886);
-            console.log('✓ 1886 год принят корректно');
+            console.log('1886 год принят корректно');
             
     } catch(e) {
-            console.log('✗ Ошибка для 1886 года:', e.message);
+            console.log('Ошибка для 1886 года:', e.message);
         }
 
 // Тест для года меньше минимального (1885) - должен вызвать ошибку
@@ -214,18 +221,18 @@ function runTests() {
 // Тест для текущего года - должен работать + 1 МАШИНА
         try {
             const currentYearVehicle = new Vehicle('Toyota', 'Camry', new Date().getFullYear());
-            console.log('✓ Текущий год принят корректно');
+            console.log('Текущий год принят корректно');
             currentYearVehicle.displayInfo();
     } catch(e) {
-            console.log('✗ Ошибка для текущего года:', e.message);
+            console.log('Ошибка для текущего года:', e.message);
         }
 
 // Тест для года больше текущего - должен вызвать ошибку
         try {
             new Vehicle('Toyota', 'Camry', new Date().getFullYear() + 1);
-            console.log('✗ Ошибка: будущий год не должен быть допустим');
+            console.log('Ошибка: будущий год не должен быть допустим');
     } catch(e) {
-            console.log('✓ Правильно обработана ошибка для будущего года:', e.message);
+            console.log('Правильно обработана ошибка для будущего года:', e.message);
         }
 
         try{
@@ -489,15 +496,15 @@ function runTests() {
     // Используем существующий объект electricCar
     try {
         electricCar.year = 1886;
-        console.log('✓ ElectricCar принимает минимальный год 1886 через сеттер');
+        console.log('ElectricCar принимает минимальный год 1886 через сеттер');
         electricCar.year = 2020; // Возвращаем обратно
     } catch(e) {
         console.log('Ошибка при установке минимального года в ElectricCar:', e.message);
     }
 
     try {
-        electricCar.year = currentYear;
-        console.log(`✓ ElectricCar принимает текущий год ${currentYear} через сеттер`);
+        electricCar.year = new Date().getFullYear();
+        console.log(`ElectricCar принимает текущий год ${new Date().getFullYear()} через сеттер`);
         electricCar.year = 2020; // Возвращаем обратно
     } catch(e) {
         console.log('Ошибка при установке текущего года в ElectricCar:', e.message);
