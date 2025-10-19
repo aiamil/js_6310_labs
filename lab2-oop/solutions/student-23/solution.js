@@ -192,6 +192,42 @@ function runTests() {
             console.log('Правильно обработана ошибка:', e.message)
         }
 
+// ДОБАВЛЕНО: Тесты для граничных случаев года выпуска Vehicle
+    console.log("\n--- Тесты граничных случаев года выпуска Car ---");
+    // Тест для минимально допустимого года (1886) + 1 МАШИНА
+        try {
+            const vehicle_3 = new Vehicle('Toyota', 'Camry', 1886);
+            console.log('✓ 1886 год принят корректно');
+            
+    } catch(e) {
+            console.log('✗ Ошибка для 1886 года:', e.message);
+        }
+
+// Тест для года меньше минимального (1885) - должен вызвать ошибку
+        try {
+            new Vehicle('Toyota', 'Camry', 1885);
+            console.log(' Ошибка: 1885 год не должен быть допустим');
+    } catch(e) {
+            console.log('Правильно обработана ошибка для 1885 года:', e.message);
+        }
+
+// Тест для текущего года - должен работать + 1 МАШИНА
+        try {
+            const currentYearVehicle = new Vehicle('Toyota', 'Camry', new Date().getFullYear());
+            console.log('✓ Текущий год принят корректно');
+            currentYearVehicle.displayInfo();
+    } catch(e) {
+            console.log('✗ Ошибка для текущего года:', e.message);
+        }
+
+// Тест для года больше текущего - должен вызвать ошибку
+        try {
+            new Vehicle('Toyota', 'Camry', new Date().getFullYear() + 1);
+            console.log('✗ Ошибка: будущий год не должен быть допустим');
+    } catch(e) {
+            console.log('✓ Правильно обработана ошибка для будущего года:', e.message);
+        }
+
         try{
             new Vehicle("Toyota", 1, "2015");
             console.log('ошибка при проверке года')
@@ -227,7 +263,7 @@ function runTests() {
     console.assert(vehicle_1.age === new Date().getFullYear() - 2015,"возраст ");
     console.assert(vehicle_2.year === 2010, "не сопадает год, если изменить");
     
-    console.assert(Vehicle.getTotalVehicles() === 2, "не совпадает количество траспортов");
+    console.assert(Vehicle.getTotalVehicles() === 4, "не совпадает количество траспортов");
     console.assert(Vehicle.compareAge(vehicle_1,vehicle_2) === vehicle_1.year -vehicle_2.year, "не совпадает разница между транспортами");
 
 
@@ -306,18 +342,40 @@ function runTests() {
     } catch (e) { 
         console.log('Правильно обработана ошибка:', e.message);
     }
+
+
+    // ДОБАВЛЕНО: Тесты для граничных случаев года выпуска Car
+    console.log("\n--- Тесты граничных случаев года выпуска Car ---");
+    
+    // Используем существующий объект car
+    try {
+        car.year = 1886; // Наследует сеттер от Vehicle
+        console.log('✓ Car принимает минимальный год 1886 через сеттер');
+        car.year = 2018; // Возвращаем обратно
+    } catch(e) {
+        console.log('Ошибка при установке минимального года в Car:', e.message);
+    }
+
+    try {
+        car.year = new Date().getFullYear();
+        console.log(`✓ Car принимает текущий год ${new Date().getFullYear()} через сеттер`);
+        car.year = 2018; // Возвращаем обратно
+    } catch(e) {
+        console.log('Ошибка при установке текущего года в Car:', e.message);
+    }
+
     car.honk();
     console.assert(car.make === "Honda","Марка совпадает марка машины  car");
     console.assert(car.model === "Civic", "Модель машины не совпадает car");
     console.assert(car.year === 2018,"Год машины не совпадает car");
     console.assert(car.numDoors === 4, "Количество дверей не совпадает");
     console.assert(car.age === new Date().getFullYear() - 2018, "возраст машины не совпадает car");
-    console.assert(Vehicle.getTotalVehicles() === 3, "Количество машин на car не правильное");
+    console.assert(Vehicle.getTotalVehicles() === 5, "Количество машин на car не правильное");
     car.year = 2017;
     car.displayInfo();
     console.assert(car.year === 2017,"Год машины car после изменний не правильное");
     console.log(`Общее количество созданных транспортных средств: ${Vehicle.getTotalVehicles()} шт`);
-    console.assert(Vehicle.getTotalVehicles() === 3, 'не совпадает кол-во тр.средства');
+
 
 
 
@@ -425,6 +483,26 @@ function runTests() {
     }
 
 
+ // ДОБАВЛЕНО: Тесты для граничных случаев года выпуска ElectricCar
+    console.log("\n--- Тесты граничных случаев года выпуска ElectricCar ---");
+    
+    // Используем существующий объект electricCar
+    try {
+        electricCar.year = 1886;
+        console.log('✓ ElectricCar принимает минимальный год 1886 через сеттер');
+        electricCar.year = 2020; // Возвращаем обратно
+    } catch(e) {
+        console.log('Ошибка при установке минимального года в ElectricCar:', e.message);
+    }
+
+    try {
+        electricCar.year = currentYear;
+        console.log(`✓ ElectricCar принимает текущий год ${currentYear} через сеттер`);
+        electricCar.year = 2020; // Возвращаем обратно
+    } catch(e) {
+        console.log('Ошибка при установке текущего года в ElectricCar:', e.message);
+    }
+
     console.assert(`Общее количество созданных транспортных после 3 задания: ${Vehicle.getTotalVehicles()} шт`);
     console.assert(electricCar.make === "Tesla", "не совпадает марка electricCar");
     console.assert(electricCar.model === "Model 3","не совпадает модель electricCar");
@@ -433,7 +511,7 @@ function runTests() {
     console.assert(electricCar.batteryCapacity === 75, "не совпадает емкость батареи electricCar");
     console.assert(electricCar.age === (new Date().getFullYear() - electricCar.year), "не совпадает возраст electricCar");
     console.assert(electricCar.calculateRange() === electricCar.batteryCapacity *6,"не совпадает запас хода electricCar");
-    console.assert(Vehicle.getTotalVehicles() === 4, 'не совпадает кол-во тр.средства');
+    console.assert(Vehicle.getTotalVehicles() === 6, 'не совпадает кол-во тр.средства');
 
     electricCar.year = 2010;
     electricCar.displayInfo();
