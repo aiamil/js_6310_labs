@@ -510,7 +510,7 @@ function runTests() {
         console.log('Ошибка при установке текущего года в ElectricCar:', e.message);
     }
 
-    console.assert(`Общее количество созданных транспортных после 3 задания: ${Vehicle.getTotalVehicles()} шт`);
+    console.log(`Общее количество созданных транспортных после 3 задания: ${Vehicle.getTotalVehicles()} шт`);
     console.assert(electricCar.make === "Tesla", "не совпадает марка electricCar");
     console.assert(electricCar.model === "Model 3","не совпадает модель electricCar");
     console.assert(electricCar.year === 2020, " не совпадает год electricCar");
