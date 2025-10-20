@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "PILATES-STYLE",
+  "version": "1.0",
+  "description": "изменяет стиль сайта kai.ru на тему в стиле PILATES-STYLE",
+  "host_permissions": ["https://kai.ru/*"],
+  "permissions": [
+    "storage"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://kai.ru/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
