@@ -206,6 +206,7 @@ function removePilatesStyles() {
     }
 }
 
+
 /// Функция демонстрации всех требуемых DOM методов
 function demonstrateDOMMethods() {
     console.log(" Демонстрация DOM методов:");
