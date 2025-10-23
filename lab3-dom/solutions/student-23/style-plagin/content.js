@@ -263,25 +263,26 @@ function createToggleButton() {
     
     /// Добавляем текстовый статус (включен/выключен)
     const isEnabled = localStorage.getItem('pilatesStyle') === 'true';
-    button.textContent = isEnabled ? '🎀 Pilates ВКЛ' : '🌙 Pilates ВЫКЛ';
+    button.textContent = isEnabled ? '🎀' : '🌙';
     button.title = isEnabled ? 'Выключить Pilates стиль' : 'Включить Pilates стиль';
     
     /// Применяем стили к кнопке
     Object.assign(button.style, {
-        padding: '8px 16px',
+        width: '40px',
+        height: '40px',
         border: `2px solid ${ACCENT_PINK}`,
-        backgroundColor: isEnabled ? ACCENT_PINK : 'transparent',
-        color: isEnabled ? WHITE : ACCENT_PINK,
-        fontSize: '14px',
+        backgroundColor: 'transparent',
+        color: ACCENT_PINK,
+        fontSize: '20px',
         cursor: 'pointer',
         margin: '0 0 0 10px',
-        borderRadius: '20px',
+        borderRadius: '50%',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
         boxShadow: `0 0 10px ${BRIGHT_PINK}`,
-        transition: 'all 0.3s ease',
-        fontWeight: 'bold'
+        float: 'left',
+        transition: 'all 0.3s ease'
     });
     
     /// Добавляем обработчик события при наведении мыши
@@ -333,7 +334,7 @@ function updateButtonText() {
     if (button) {
         const isEnabled = localStorage.getItem('pilatesStyle') === 'true';
         /// Обновляем текст и стили кнопки в зависимости от состояния
-        button.textContent = isEnabled ? '🎀 Pilates ВКЛ' : '🌙 Pilates ВЫКЛ';
+        button.textContent = isEnabled ? '🎀' : '🌙';
         button.title = isEnabled ? 'Выключить Pilates стиль' : 'Включить Pilates стиль';
         button.style.backgroundColor = isEnabled ? ACCENT_PINK : 'transparent';
         button.style.color = isEnabled ? WHITE : ACCENT_PINK;
