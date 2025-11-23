@@ -1,0 +1,135 @@
+{
+  "adTemplates": {
+    "Creative": {
+      "small": [
+        "✨ {product} — {benefit}! {cta}",
+        "{product} — {one_line}. {cta}",
+        "С {product} всё станет ярче! {benefit}. {cta}",
+        "Не пропусти! {product} — {one_line}. {cta}",
+        "Вдохновляйся с {product} каждый день! {benefit}. {cta}"
+      ],
+      "medium": [
+        "Открой для себя {product}. {one_line} — {benefit}. {cta}",
+        "{product} — больше возможностей для {audience}. {benefit}. {cta}",
+        "С {product} ваш день станет продуктивнее и веселее. {one_line}. {cta}",
+        "Вдохновляйся с {product} и достигай целей быстрее! {benefit}. {cta}",
+        "Хотите чего-то нового? {product} — {one_line}. {benefit}. {cta}"
+      ],
+      "large": [
+        "{product} — решение, которое вы искали. {one_line}. {benefit}. Подробности: современный дизайн, простота использования и отличная поддержка. {cta}",
+        "Повысьте эффективность с {product}: {one_line}. {benefit}. Начните уже сегодня! {cta}",
+        "С {product} жизнь становится ярче и насыщеннее. {one_line}. {benefit}. Лучшие функции, лёгкость использования и максимум пользы для {audience}. {cta}",
+        "{product} — идеальный выбор для {audience}. {one_line}. {benefit}. Узнайте, как он изменит вашу работу и досуг. {cta}",
+        "Не ждите чудес — создавайте их с {product}. {one_line}. {benefit}. Инновации, комфорт и стиль в одном продукте. {cta}"
+      ]
+    },
+    "Formal": {
+      "small": [
+        "{product} — профессиональное решение для {audience}. {benefit}. {cta}",
+        "{product} помогает {audience} достигать целей быстрее. {cta}",
+        "Надёжно и эффективно: {product}. {one_line}. {cta}",
+        "Оптимизируйте процессы с {product}. {benefit}. {cta}",
+        "{product} — ваш помощник в работе. {one_line}. {cta}"
+      ],
+      "medium": [
+        "{product} поможет {audience} оптимизировать процессы и {benefit}. {one_line}. {cta}",
+        "Используйте {product} для повышения эффективности и качества работы. {benefit}. {cta}",
+        "С {product} вы получаете проверенное решение для {audience}. {one_line}. {cta}",
+        "{product} обеспечивает стабильный результат и {benefit}. {one_line}. {cta}",
+        "Делайте больше с меньшими усилиями — {product} для {audience}. {benefit}. {cta}"
+      ],
+      "large": [
+        "{product} — надёжное и проверенное решение для {audience}. {one_line}. {benefit}. Специальное предложение: {cta}",
+        "Повысьте продуктивность с {product}: комплексное решение для {audience}. {one_line}. {benefit}. {cta}",
+        "{product} обеспечивает долгосрочный результат для {audience}. {one_line}. {benefit}. Соответствует высоким стандартам отрасли. {cta}",
+        "Наша цель — сделать ваш бизнес эффективнее. {product} поможет {audience} достигнуть этого быстро и безопасно. {benefit}. {cta}",
+        "Доверяйте профессионалам. {product} — проверенное решение для {audience}. {one_line}. {benefit}. {cta}"
+      ]
+    },
+    "Playful": {
+      "small": [
+        "Вау! {product} уже здесь — {benefit}! 🎉 {cta}",
+        "{product} — твой новый друг в мире возможностей! {one_line}. {cta}",
+        "Весело и просто: {product} для {audience}! {benefit}. {cta}",
+        "С {product} скучно не будет! {one_line}. {cta}",
+        "Попробуй {product} и {benefit} каждый день 😄 {cta}"
+      ],
+      "medium": [
+        "Готовы к переменам? {product} сделает всё веселее и проще! {one_line}. {benefit}. {cta}",
+        "{product} добавит радости и удобства для {audience}. {benefit}. {cta}",
+        "Веселье начинается с {product} — {one_line}. {benefit}. {cta}",
+        "С {product} работа превращается в игру для {audience}. {benefit}. {cta}",
+        "Новые идеи и позитив с {product} — {one_line}. {benefit}. {cta}"
+      ],
+      "large": [
+        "С {product} жизнь становится ярче для {audience}: {one_line}. {benefit}. Подходит тем, кто любит простые решения с улыбкой 😊 {cta}",
+        "Хотите весёлое и эффективное решение? {product} — ваш ключ к {benefit}. {one_line}. {cta}",
+        "Добавьте радости в каждый день с {product}: {one_line}. {benefit}. Легко, быстро и с улыбкой для {audience}. {cta}",
+        "{product} превращает рутинные задачи в увлекательное приключение для {audience}. {one_line}. {benefit}. {cta}",
+        "С {product} любая задача становится проще и веселее для {audience}. {one_line}. {benefit}. Отличный выбор для креативных людей! {cta}"
+      ]
+    }
+  },
+  "platformTemplates": {
+    "TikTok": [
+      "Краткий хук: {product} — {benefit}! 🔥\n{one_line}\nПокажи в действии — 15-30s. Идеально для {audience}. {cta}",
+      "Начни с вопроса: «Устал от проблем?» {product} — {one_line}. {benefit}. Решение для {audience}. {cta}",
+      "Тренд + {product}: сделай челлендж с {product} и пометь друзей. {one_line}. {benefit}. Идеально для {audience}. {cta}"
+    ],
+    "Instagram": [
+      "Красивый визуал + подпись: {product} — {one_line}. {benefit}. Узнайте больше в профиле. Для {audience}. {cta}",
+      "Карусель: 1) проблема 2) решение — {product} 3) отзывы. {one_line}. {benefit}. Заканчиваем сильным CTA: {cta}",
+      "Сторис: короткий ролик с демонстрацией {product} + {one_line}. {benefit}. Для {audience}. {cta}"
+    ],
+    "Telegram": [
+      "Текст + кнопка: {product} — {one_line}. {benefit}. Подробнее в канале. Для {audience}. {cta}",
+      "Анонс в канале: кратко о выгоде ({benefit}) и {one_line}. Решение для {audience}. {cta}",
+      "Пост с кейсом: {product} помог {audience} достичь результатов. {one_line}. {benefit}. {cta}"
+    ],
+    "Twitch": [
+      "Живое упоминание во время стрима: расскажите, как {product} помогает {audience}. {one_line}. {benefit}. {cta}",
+      "Баннер/оффер во время паузы: {product} — {one_line}. {benefit}. Скидка для зрителей {audience}. {cta}",
+      "Коллаб с популярным стримером: демонстрация {product} для {audience}. {one_line}. {benefit}. {cta}"
+    ]
+  },
+  "questions": {
+    "genQuestions": [
+      { "key": "product", "text": "1) Название продукта/услуги (коротко). Пример: «EcoBottle», «Курсы по SMM»." },
+      { "key": "one_line", "text": "2) Короткое описание (одна фраза). Пример: «Многоразовая бутылка с фильтром»." },
+      { "key": "audience", "text": "3) Целевая аудитория. Пример: «студенты», «владельцы малого бизнеса»." },
+      { "key": "benefit", "text": "4) Главное преимущество/выгода. Пример: «экономит время»." },
+      { "key": "cta", "text": "5) Призыв к действию (CTA). Пример: «Купить сейчас», «Записаться»." }
+    ],
+    "platformQuestions": [
+      { "key": "product", "text": "1) Название продукта/услуги (коротко). Пример: «EcoBottle», «Курсы по SMM»." },
+      { "key": "one_line", "text": "2) Короткое описание (одна фраза). Пример: «Многоразовая бутылка с фильтром»." },
+      { "key": "audience", "text": "3) Целевая аудитория. Пример: «студенты», «владельцы малого бизнеса»." },
+      { "key": "benefit", "text": "4) Главное преимущество/выгода. Пример: «экономит время»." },
+      { "key": "cta", "text": "5) Призыв к действию (CTA). Пример: «Купить сейчас», «Записаться»." }
+    ]
+  },
+
+  "budget": {
+    "questions": [
+      { "key": "goal", "text": "1) Планируемая выручка. Сколько денег ожидаете получить на счет?" },
+      { "key": "kpi", "text": "2) Переменные расходы. Сколько денег тратится прямо пропорционально продажам? (Себестоимость товаров/услуг)." },
+      { "key": "audience", "text": "3) Постоянные расходы. Сколько денег отдадите в любом случае, даже если продаж нет? (Аренда, зарплата, налоги)." },
+      { "key": "channels", "text": "4) Капитальные расходы. На какие единовременные крупные покупки нужны деньги? (Оборудование, ремонт, автомобиль)." }
+
+    ],
+    "expenseControlQuestions": [
+      { "key": "total_budget", "text": "Введите общий бюджет кампании (руб.):" },
+      { "key": "spent_amount", "text": "Сколько уже потрачено (руб.)?" },
+      { "key": "campaign_days", "text": "Сколько дней длится кампания?" },
+      { "key": "remaining_days", "text": "Сколько дней осталось до конца кампании?" }
+    ],
+    "platformBenchmarks": {
+      "VK": { "cpa": 300, "cpm": 200 },
+      "Instagram": { "cpa": 600, "cpm": 400 },
+      "Google Ads": { "cpa": 700, "cpm": 500 },
+      "Yandex.Direct": { "cpa": 650, "cpm": 450 },
+      "Telegram": { "cpa": 400, "cpm": 250 },
+      "TikTok": { "cpa": 550, "cpm": 350 }
+    }
+  }
+}
