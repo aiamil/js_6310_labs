@@ -1,1 +1,2 @@
- - ссылка :  https://github.com/aiamil/sadyr_studio_website/pulls
+ - ссылка на пулл ревест 
+  :  https://github.com/aiamil/sadyr_studio_website/pulls
